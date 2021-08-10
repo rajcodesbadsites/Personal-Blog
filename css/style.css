@@ -1,0 +1,291 @@
+@font-face {
+  font-family: colorsofautumn;
+  src: url(../../fonts/colorsofautumn.ttf);
+}
+@font-face {
+  font-family: antrovectra;
+  src: url(../../fonts/Antro_Vectra.otf);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  background-color: #1a1a1a;
+  /*#242424*/
+  color: #fbfbfb;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::after,
+body::after {
+  content: "";
+  background-image: url(../../img/noise.png);
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: antrovectra, cursive;
+  font-family: "Abril fatface", serif;
+  font-family: "Roboto Mono", sans-serif;
+  font-family: colorsofautumn, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.5em 0 0 rgba(255, 0, 0, 0.75), -0.5em -0.25em 0 rgba(212, 0, 255, 0.75), -0.25em 0.5em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.5em 0 0 rgba(255, 0, 0, 0.75), -0.5em -0.25em 0 rgba(212, 0, 255, 0.75), -0.25em 0.5em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.5em -0.25em 0 rgba(255, 0, 0, 0.75), 0.25em 0.25em 0 rgba(212, 0, 255, 0.75), -0.5em -0.5em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.5em -0.25em 0 rgba(255, 0, 0, 0.75), 0.25em 0.25em 0 rgba(212, 0, 255, 0.75), -0.5em -0.5em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.25em 0.5em 0 rgba(255, 0, 0, 0.75), 0.5em 0 0 rgba(212, 0, 255, 0.75), 0 -0.5em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.25em 0.5em 0 rgba(255, 0, 0, 0.75), 0.5em 0 0 rgba(212, 0, 255, 0.75), 0 -0.5em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(212, 0, 255, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+@keyframes autoplay1 {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    visibility: hidden;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  margin-top: 3rem;
+}
+.nav__items {
+  font-size: 2.4rem;
+  font-family: "Abril fatface";
+}
+.nav__links {
+  text-decoration: none;
+  color: white;
+  text-shadow: 0;
+}
+.nav__links:hover {
+  text-shadow: 0.5em 0 0 rgba(255, 0, 0, 0.75), -0.25em -0.5em 0 rgba(212, 0, 255, 0.75), 0.25em 0.5em 0 rgba(0, 0, 255, 0.75);
+  color: yellow;
+  animation: glitch 500ms infinite;
+}
+
+.visited--link {
+  text-decoration: none;
+  color: #027dee;
+}
+
+.hero {
+  position: relative;
+  height: 80vh;
+}
+.hero__photo__img {
+  height: 57vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  animation: 0.8s autoplay1 infinite;
+}
+.hero__photo__img:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero__photo__img:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.hero__photo__img:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.hero__photo__img:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.hero__textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #5b1414;
+}
+.hero__textbox--span {
+  color: white;
+  position: absolute;
+  top: 260%;
+  transform: translateX(-50%) rotate(-7deg);
+}
+
+.blog {
+  position: relative;
+  z-index: 300;
+  display: grid;
+  width: 83vw;
+  margin: 12rem auto;
+  grid-template-columns: 28rem repeat(2, 24rem) 28rem;
+  grid-template-rows: repeat(4, 24rem);
+  gap: 4rem;
+  font-family: "Abril fatface";
+}
+.blog__entry {
+  background: rgba(82, 82, 82, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+}
+.blog__entry:hover {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
+  outline-offset: -2px;
+  background: rgba(82, 82, 82, 0.2);
+  cursor: pointer;
+}
+.blog__entry:active {
+  outline: 4px solid rgba(255, 255, 255, 0.9);
+  outline-offset: -2px;
+  background: rgba(82, 82, 82, 0.2);
+  background: rgba(82, 82, 82, 0.9);
+  cursor: pointer;
+}
+.blog__heading {
+  font-family: "Abril fatface";
+  font-size: 2.4rem;
+  font-weight: 400;
+  width: 11ch;
+}
+.blog__meta-info {
+  display: flex;
+  justify-content: start;
+}
+.blog__date, .blog__time {
+  font-family: "Roboto Mono";
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 2.6rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.blog__time {
+  margin-left: 1.4rem;
+}
+.blog__paragraph {
+  font-size: 1.8rem;
+  font-family: "Roboto Mono";
+  line-height: 3.2rem;
+  width: 60ch;
+}
+
+.span-1 {
+  grid-column: 2/5;
+  grid-row: 1/3;
+}
+.span-1__title {
+  width: 24ch;
+  font-size: 4.8rem;
+  font-family: antrovectra;
+}
+
+.span-2__title {
+  font-family: colorsofautumn;
+  font-size: 2.4rem;
+  width: 22ch;
+  line-height: 3.2rem;
+  letter-spacing: 0.205em;
+}
+
+.span-3 {
+  grid-column: 1/4;
+  grid-row: 3/5;
+}
+
+.entry {
+  width: 90vw;
+  margin: 6rem auto;
+  font-family: "Abril fatface";
+}
+.entry__heading {
+  font-weight: 400;
+  font-size: 4.8rem;
+  width: 24ch;
+}
+.entry__paragraph {
+  font-family: "Roboto Mono";
+  font-size: 1.8rem;
+  width: 75ch;
+  line-height: 3.2rem;
+}
+.entry__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.entry__close {
+  transform: rotate(0deg);
+  transition: all 0.1s ease-in-out;
+  padding: 2px;
+}
+.entry__close:hover {
+  transform: rotate(360deg);
+  background: red;
+  padding: 2px;
+}
+
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Roboto Mono";
+  gap: 2rem;
+  width: 90vw;
+  margin: 6rem auto;
+  font-size: 2.4rem;
+}
+.photo__link:hover {
+  color: red;
+}
+
+.af {
+  font-family: "Abril fatface";
+}
+
+.coa {
+  font-family: colorsofautumn;
+}
+
+.av {
+  font-family: antrovectra;
+}
+
+/*# sourceMappingURL=style.css.map */

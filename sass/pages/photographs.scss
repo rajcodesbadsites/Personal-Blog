@@ -1,0 +1,25 @@
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Roboto Mono";
+  gap: 2rem;
+  width: 90vw;
+  margin: 6rem auto;
+  font-size: 2.4rem;
+
+  &__link:hover {
+    color: red;
+  }
+}
+
+.af {
+  font-family: "Abril fatface";
+}
+
+.coa {
+  font-family: colorsofautumn;
+}
+
+.av {
+  font-family: antrovectra;
+}

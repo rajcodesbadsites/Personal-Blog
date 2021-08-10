@@ -1,0 +1,47 @@
+.hero {
+  position: relative;
+  height: 80vh;
+
+  &__photo {
+    &__img {
+      height: 57vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      animation: 0.8s autoplay1 infinite;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+    }
+  }
+
+  &__textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #5b1414;
+
+    &--span {
+      color: white;
+      position: absolute;
+      top: 260%;
+      transform: translateX(-50%) rotate(-7deg);
+    }
+  }
+}

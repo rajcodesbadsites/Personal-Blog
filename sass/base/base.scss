@@ -1,0 +1,55 @@
+@font-face {
+  font-family: colorsofautumn;
+  src: url(../../fonts/colorsofautumn.ttf);
+}
+
+@font-face {
+  font-family: antrovectra;
+  src: url(../../fonts/Antro_Vectra.otf);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  background-color: #1a1a1a; /*#242424*/
+  color: #fbfbfb;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html::after,
+body::after {
+  content: "";
+  background-image: url(../../img/noise.png);
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+html {
+  font-size: 62.5%; // rem unit value definition 1rem=10px because 10px/16px = 0.625 or 62.5%
+}
+
+body {
+  box-sizing: border-box;
+  font-family: antrovectra, cursive;
+  font-family: "Abril fatface", serif;
+  font-family: "Roboto Mono", sans-serif;
+  font-family: colorsofautumn, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

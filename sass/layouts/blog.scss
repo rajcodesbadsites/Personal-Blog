@@ -1,0 +1,125 @@
+.blog {
+  position: relative;
+  z-index: 300;
+  display: grid;
+  width: 83vw;
+  margin: 12rem auto;
+  grid-template-columns: 28rem repeat(2, 24rem) 28rem;
+  grid-template-rows: repeat(4, 24rem);
+  gap: 4rem;
+  font-family: "Abril fatface";
+
+  &__entry {
+    background: rgba(82, 82, 82, 0.4);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+
+    &:hover {
+      outline: 2px solid rgba(255, 255, 255, 0.9);
+      outline-offset: -2px;
+      background: rgba(82, 82, 82, 0.2);
+      cursor: pointer;
+    }
+
+    &:active {
+      outline: 4px solid rgba(255, 255, 255, 0.9);
+      outline-offset: -2px;
+      background: rgba(82, 82, 82, 0.2);
+      background: rgba(82, 82, 82, 0.9);
+      cursor: pointer;
+    }
+  }
+
+  &__heading {
+    font-family: "Abril fatface";
+    font-size: 2.4rem;
+    font-weight: 400;
+    width: 11ch;
+  }
+
+  &__meta-info {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__date,
+  &__time {
+    font-family: "Roboto Mono";
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2.6rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__time {
+    margin-left: 1.4rem;
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+    font-family: "Roboto Mono";
+    line-height: 3.2rem;
+    width: 60ch;
+  }
+}
+
+.span-1 {
+  grid-column: 2 / 5;
+  grid-row: 1 / 3;
+  &__title {
+    width: 24ch;
+    font-size: 4.8rem;
+    font-family: antrovectra;
+  }
+}
+
+.span-2 {
+  &__title {
+    font-family: colorsofautumn;
+    font-size: 2.4rem;
+    width: 22ch;
+    line-height: 3.2rem;
+    letter-spacing: 0.205em;
+  }
+}
+
+.span-3 {
+  grid-column: 1/4;
+  grid-row: 3/5;
+}
+
+.entry {
+  width: 90vw;
+  margin: 6rem auto;
+  font-family: "Abril fatface";
+  &__heading {
+    font-weight: 400;
+    font-size: 4.8rem;
+    width: 24ch;
+  }
+
+  &__paragraph {
+    font-family: "Roboto Mono";
+    font-size: 1.8rem;
+    width: 75ch;
+    line-height: 3.2rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__close {
+    transform: rotate(0deg);
+    transition: all 0.1s ease-in-out;
+    padding: 2px;
+
+    &:hover {
+      transform: rotate(360deg);
+      background: red;
+      padding: 2px;
+    }
+  }
+}
